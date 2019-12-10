@@ -7,6 +7,6 @@ namespace WebApplication1
 {
     public class SettingsWithCollection
     {
-        public ICollection<string> props { get; set; } = new List<string>() { "default" };
+        public ICollection<string> props { get; set; } = new DefaultBackedCollection<string>(new List<string>() { "c", "d" });
     }
 }
