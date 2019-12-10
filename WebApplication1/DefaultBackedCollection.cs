@@ -12,7 +12,7 @@ namespace WebApplication1
         private readonly IList<T> currents = new List<T>();
         public DefaultBackedCollection(List<T> defaultElements)
         {
-            defaults = defaultElements;
+            defaults = defaultElements ?? new List<T>();
         }
         public int Count => currents.Any() ? currents.Count : defaults.Count;
 
